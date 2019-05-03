@@ -11,5 +11,5 @@ public interface LibraryRepository {
 
     List<Book> getBooksByCategory(String categoryName);
 
-    List<Author> getAuthorsOrderByAuthorRatingDesc();
+    List<Author> getAuthors();
 }

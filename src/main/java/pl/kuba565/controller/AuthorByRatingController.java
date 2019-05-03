@@ -20,7 +20,7 @@ public class AuthorByRatingController {
 
     @GetMapping()
     public ResponseEntity<List<Author>> authorsByAuthorRatingDesc() {
-        List<Author> authors = inMemoryLibraryRepository.getAuthorsOrderByAuthorRatingDesc();
+        List<Author> authors = inMemoryLibraryRepository.getAuthors();
 
         if (authors.size() > 0) {
             return ResponseEntity.ok(authors);

@@ -79,7 +79,7 @@ public class FileToLibraryMapperService {
         return books;
     }
 
-    public List<Author> mapJsonToAuthorList() {
+    public List<Author> mapJsonToAuthorListSortByAvgRatingDesc() {
         List<Author> authors = new ArrayList<>();
         Map<String, List<Double>> authorRatingMap = new HashMap<>();
         List<Book> books = mapJsonToBookList();

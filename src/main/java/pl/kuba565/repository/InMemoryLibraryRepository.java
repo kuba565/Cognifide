@@ -15,7 +15,7 @@ public class InMemoryLibraryRepository implements LibraryRepository {
 
     public InMemoryLibraryRepository(FileToLibraryMapperService fileToLibraryMapperService) {
         this.books = fileToLibraryMapperService.mapJsonToBookList();
-        this.authors = fileToLibraryMapperService.mapJsonToAuthorList();
+        this.authors = fileToLibraryMapperService.mapJsonToAuthorListSortByAvgRatingDesc();
     }
 
     @Override
@@ -44,12 +44,8 @@ public class InMemoryLibraryRepository implements LibraryRepository {
     }
 
     @Override
-    public List<Author> getAuthorsOrderByAuthorRatingDesc() {
-        List<Author> result;
-
-        result = authors;
-
-        return result;
+    public List<Author> getAuthors() {
+        return authors;
     }
 
 }
